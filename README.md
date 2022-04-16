@@ -1,2 +1,1 @@
-# menta
-this is for menta
+# 課題の提出やポートフォリオの管理用
