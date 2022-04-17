@@ -186,6 +186,103 @@ console.log(arr.indexOf('みかん'))
 // 課題65
 console.log(arr.includes('りんご'))
 
+// 課題66
+console.log(arr.slice(1,3))
+
+// 課題67
+console.log(arr.splice(2,1))
+
+// 課題68
+arr.forEach((x) => console.log(x))
+
+// 課題69
+const numbers = [1, 2, 3]
+const doubleNumbers = numbers.map((x) => x * 2)
+console.log(doubleNumbers)
+
+// 課題70
+const TripleNumbers = numbers.map((x) => x * 3)
+console.log(TripleNumbers)
+
+// 課題73
+const array = ['いぬ','さる','きじ']
+console.log(array.sort())
+
+// 課題74
+const array74 = [1975,11,20]
+console.log(array74.sort((a,b) => a - b))
+
+// 課題75
+console.log(array74.sort((a,b) => b - a))
+
+// 課題77
+const array77 = ['りんご','みかん','いちご']
+console.log(array77.join(','))
+
+// 課題78
+const array78 = [1,2,3,4,5]
+const arrayClone = [...array78]
+console.log(arrayClone)
+
+// 課題79
+const array79 = [...array78,6,7,8,9,10]
+console.log(array79)
+
+// 課題83
+const object = [
+    {'id': 1, 'name': 'ジョン', 'age': 15},
+    {'id': 2, 'name': 'ボブ', 'age': 20},
+    {'id': 3, 'name': 'マイケル', 'age': 30},
+]
+console.log(object)
+
+// 課題85
+console.log(object[2].age)
+
+// 課題86
+const found = object.filter((obj) => obj.name.length >= 3)
+console.log(found)
+
+// 課題87
+const found87 = object.filter((obj) => obj.id != 1)
+console.log(found87)
+
+// 課題94
+const array_94_1 = [1,2,3]
+const array_94_2 = [4,5,6]
+console.log([...array_94_1,...array_94_2])
+
+// 課題95
+const object95 = {'id':1,'name':'ベッキー','age':20}
+const object95_clone = {...object95}
+console.log(object95_clone)
+
+// 課題96
+const object96 = {...object95,'height': 175,}
+console.log(object96)
+
+// 課題97
+const object97 = {'height': 175,'weight': 70}
+const object97_merge = {...object96,...object97}
+console.log(object97_merge)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
