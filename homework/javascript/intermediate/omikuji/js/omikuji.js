@@ -21,14 +21,11 @@ function get_fortune() {
  * おみくじスタートボタンクリック時のイベントリスナー。
  * おみくじの結果を画面に反映する。
  * おみくじの結果が凶の時のみ、ダイアログを表示する。
- * @param {*} e  クリックイベントオブジェクト。
  */
-function on_click_start_omikuji_btn(e) {
+start_omikuji_btn.addEventListener('click', () => {
     let omikuji_result = get_fortune();
     div_element.innerHTML = omikuji_result;
     if (omikuji_result == '大吉') {
         confetti();
     }
-}
-
-start_omikuji_btn.addEventListener('click', on_click_start_omikuji_btn, false);
+});
