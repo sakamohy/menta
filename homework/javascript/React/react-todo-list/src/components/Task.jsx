@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import EditForm from "./EditForm";
 
 const Task = ({ taskModel, deleteTask, updateTask }) => {
-  const [isEding, setIsEding] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const [isDone, setIsDone] = useState(taskModel.isDone);
 
@@ -19,7 +19,7 @@ const Task = ({ taskModel, deleteTask, updateTask }) => {
   const detailStyle = {
     overflow: "hidden",
     whiteSpace: "nowrap",
-    textOverflowe: "ellipsis",
+    textOverflow: "ellipsis",
   };
 
   const detailIsDoneStyle = titleIsDoneStyle;
@@ -34,23 +34,7 @@ const Task = ({ taskModel, deleteTask, updateTask }) => {
 
   const deleteButtonStyle = editButtonStyle;
 
-  const onClickEditButton = () => {
-    setIsEding(true);
-  };
-
-  const onCLickDeleteButton = () => {
-    deleteTask(taskModel.uuid);
-  };
-
-  const onMouseEnter = () => {
-    setIsHover(true);
-  };
-
-  const onMouseLeave = () => {
-    setIsHover(false);
-  };
-
-  const onChnageCheckBox = (e) => {
+  const onChangeCheckBox = (e) => {
     taskModel.isDone = !taskModel.isDone;
     updateTask(e.target.value, taskModel);
 
@@ -59,19 +43,22 @@ const Task = ({ taskModel, deleteTask, updateTask }) => {
 
   return (
     <>
-      {isEding ? (
+      {isEditing ? (
         <EditForm
           editTaskModel={taskModel}
           updateTask={updateTask}
-          setIsEding={setIsEding}
+          setIsEditing={setIsEditing}
         />
       ) : (
-        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <div
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+        >
           <input
             type="checkbox"
             checked={isDone ? "checked" : ""}
             value={taskModel.uuid}
-            onChange={onChnageCheckBox}
+            onChange={onChangeCheckBox}
           />
           <h3 style={{ ...titleStyle, ...titleIsDoneStyle }}>
             {taskModel.title}
@@ -79,21 +66,22 @@ const Task = ({ taskModel, deleteTask, updateTask }) => {
           <h4 style={{ ...detailStyle, ...detailIsDoneStyle }}>
             {taskModel.detail}
           </h4>
-
           <input
             style={{ ...deadLineStyle, ...deadLineIsDoneStyle }}
             type="datetime-local"
             value={taskModel.deadLine}
             readOnly
           />
-
           <button
             style={{ ...editButtonStyle, ...editButtonIsDoneStyle }}
-            onClick={onClickEditButton}
+            onClick={() => setIsEditing(true)}
           >
             編集
           </button>
-          <button style={deleteButtonStyle} onClick={onCLickDeleteButton}>
+          <button
+            style={deleteButtonStyle}
+            onClick={() => deleteTask(taskModel.uuid)}
+          >
             削除
           </button>
         </div>

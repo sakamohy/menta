@@ -1,7 +1,7 @@
 import TaskModel from "./TaskModel";
 import Form from "./Form";
 
-const EditForm = ({ editTaskModel, updateTask, setIsEding }) => {
+const EditForm = ({ editTaskModel, updateTask, setIsEditing }) => {
   const onCLickEditButton = (e, editTitle, editDetail, editDeadLine) => {
     e.preventDefault();
 
@@ -12,12 +12,12 @@ const EditForm = ({ editTaskModel, updateTask, setIsEding }) => {
       editTaskModel.isDone
     );
     updateTask(editTaskModel.uuid, updateTaskModel);
-    setIsEding(false);
+    setIsEditing(false);
   };
 
   const onClickCancelButton = (e) => {
     e.preventDefault();
-    setIsEding(false);
+    setIsEditing(false);
   };
 
   return (

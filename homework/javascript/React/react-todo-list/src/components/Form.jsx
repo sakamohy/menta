@@ -31,18 +31,6 @@ const Form = ({
     width: "30%",
   };
 
-  const onChangeTitle = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const onChangeDetail = (e) => {
-    setDetail(e.target.value);
-  };
-
-  const onChangeDeadLine = (e) => {
-    setDeadLine(e.target.value);
-  };
-
   return (
     <>
       <form onSubmit={(e) => onSubmitForm(e, title, detail, deadLine)}>
@@ -50,20 +38,20 @@ const Form = ({
           <input
             placeholder="件名"
             type="text"
-            onChange={onChangeTitle}
+            onChange={(e) => setTitle(e.target.value)}
             value={title}
             style={inputStyle}
           />
           <textarea
             placeholder="説明"
-            onChange={onChangeDetail}
+            onChange={(e) => setDetail(e.target.value)}
             value={detail}
             style={{ ...inputStyle, ...textAreaStyle }}
           />
           <input
             type="datetime-local"
             value={deadLine}
-            onChange={onChangeDeadLine}
+            onChange={(e) => setDeadLine(e.target.value)}
           />
         </fieldset>
         <div>
