@@ -1,4 +1,4 @@
-module github.com/sakahyu/output/go/todo_app
+module github.com/sakamohy/output/go/todo_app
 
 go 1.18
 
