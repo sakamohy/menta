@@ -21,4 +21,11 @@ package.json配下で管理しているライブラリやコマンドを使え�
 ts-node-dev --respawn hoge.ts 
 上のコマンドで変更を検知して、コンパイルから実行までを行うことができる。
 
-
+## 文法
+### 型アノテーション
+```ts
+let isFinished: boolean = true;
+```
+### モジュールシステム
+import export がないと変数は全てグローバルになる。
+ß
