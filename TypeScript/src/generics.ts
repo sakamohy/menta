@@ -1,13 +1,7 @@
 export {};
 
 // 内部でおこなっているロジックは同じだが、引数や戻り値の方が違う。→ ジェネリクスで対応する。
-// const echo = (arg: number): number => {
-//     return arg;
-// }
-
-// const echo = (arg: string): string => {
-//     return arg;
-// }
+// 実行するまで確定しない型にすることによって、関数やクラスの抽象度を上げて再利用性の高いものを作ることができる。
 
 // ジェネリクスを使う場合は、関数の前に＜T＞をつけないといけない。
 const echo = <T>(arg: T): T => {
