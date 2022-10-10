@@ -1,33 +1,23 @@
 # TypeScript
-## package.json
+## 環境構築
+### package.json
 パッケージを管理するファイル。
 インストールしたパッケージやよく使うコマンドを登録しておくことで開発環境を簡単に構築、配布することができる。
-登録したコマンドは、npm run scriptで実行できる。
-
-## npm
+### npm
 npmコマンドは、パッケージのインストールをすることができる。
-### save-dev
+#### save-dev
 開発環境のバージョンは固定した方が良いためオプションを指定する。
 インストールしたものが有効なのは、このpackage.json配下のプロジェクトのみである。
-
-## npx
+### npx
 npmインストールでインストールしたコマンドやライブラリを使えるコマンド。 
 package.json配下で管理しているライブラリやコマンドを使えることができる。
-
-## パッケージ
-### ts-node
+### パッケージ
+#### ts-node
 コンパイルから実行までを全て一つのコマンドを行うことできる。
-### ts-node-dev
+#### ts-node-dev
 ts-node-dev --respawn hoge.ts 
 上のコマンドで変更を検知して、コンパイルから実行までを行うことができる。
 
 ## 文法
-### 型アノテーション
-```ts
-let isFinished: boolean = true;
-```
-### モジュールシステム
-import export がないと変数は全てグローバルになる。
-
-### 動的に型を作ることができる
+https://github.com/DiveIntoHacking/typescript-for-javascript-developers/tree/master/src
 
