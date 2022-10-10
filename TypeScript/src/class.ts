@@ -93,3 +93,6 @@ const jiro = new Jiro();
 jiro.ionazun();
 jiro.kougeki();
 // Interfaceは、実装を強制することができるため実装忘れを防げる＆実装を保証できる。
+
+// interfaceは、オブジェクトのみのタイプエイリアス。つまり、interfaceを用意するとオブジェクト限定ということがわかる。
+// type alias は、上位互換。interfaceは、絶対にオブジェクトだけを指し示す。Union型などもいけない。
