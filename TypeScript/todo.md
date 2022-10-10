@@ -1,0 +1,11 @@
+- インデックスシグネチャ
+- typeof or keyof
+- runtime enviroment
+- npm npx save-dev
+- ts-node
+- never型
+- React Hooks
+- Componet Render or Reload
+- intersection
+- Union
+- class or object 
