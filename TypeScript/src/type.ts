@@ -134,3 +134,19 @@ console.log(value);
 // Literal型 指定する型の中でも有限なものを指定するときに行う。より小さい方が良い。
 type week = "月" | "火";
 
+// A型からB型へ値を代入することができる場合は互換性があるという。
+let fooCompatible: any;
+let barCompatible: string = "TypeScript";
+fooCompatible = barCompatible;
+
+// オブジェクト間の方の互換性の評価は、持っているプロパティが同じ＆プロパティの型に互換性がある。
+// 型は直接的には関係なくなる。
+interface Animal {
+  age: number;
+  name: string;
+}
+class Person {
+  constructor(public age: number, public name: string) {}
+}
+let me: Animal;
+me = new Person(43, "HamSan");
