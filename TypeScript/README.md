@@ -28,4 +28,6 @@ let isFinished: boolean = true;
 ```
 ### モジュールシステム
 import export がないと変数は全てグローバルになる。
-ß
+
+### 動的に型を作ることができる
+
